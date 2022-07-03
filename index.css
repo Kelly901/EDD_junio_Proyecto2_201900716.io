@@ -1,0 +1,104 @@
+body{
+    background: black;
+}
+
+.linea {
+
+    background-color: black;
+    
+    width: 100%;
+    height: 40px;
+    }
+    .linea a{
+        margin: 0px 10px;
+    }
+    .linea img{
+        
+        height: 20px;
+    }
+    .linea button{
+        font-size: 15px;
+        text-align: center;
+        margin: 0px 10px;
+        height: 30px;
+    }
+
+
+    
+    .info{
+        background: linear-gradient(90deg, black, #121946, #131b30, #030a36, rgb(12, 12, 12));
+        display:flex; justify-content:center; align-items: center;
+        
+        width: 100%;
+        height: 200px;
+    
+     
+    }
+
+    .opcionesGenerales{
+        background: linear-gradient(90deg, black, #121213, #010b24, rgb(6, 4, 20), rgb(12, 12, 12));
+        
+        border: 3px solid linear-gradient(90deg, rgb(37, 36, 36), #18181a, #030e29, rgb(6, 4, 20), rgb(12, 12, 12));
+        width: 100%;
+        height: 50px;
+    }
+    .opcionesGenerales button{
+        color: aliceblue;
+    }
+
+    .login{
+        color: aliceblue;
+        margin: 0px 350px;
+        width: 600px;
+        
+    }
+
+
+    .opcionesGenerales{
+        background: linear-gradient(90deg, black, #121213, #010b24, rgb(6, 4, 20), rgb(12, 12, 12));
+        
+        border: 3px solid linear-gradient(90deg, rgb(37, 36, 36), #18181a, #030e29, rgb(6, 4, 20), rgb(12, 12, 12));
+        width: 100%;
+        height: 50px;
+    }
+
+    .opcionesAdmin{
+        background: linear-gradient(90deg, black, #121213, #010b24, rgb(6, 4, 20), rgb(12, 12, 12));
+        
+        border: 3px solid linear-gradient(90deg, rgb(37, 36, 36), #18181a, #030e29, rgb(6, 4, 20), rgb(12, 12, 12));
+        width: 100%;
+        height: 50px;
+    }
+
+    .opcionesAdmin button{
+        color: aliceblue;
+    }
+    #vista_Imagen{
+        margin: 100px 30px;
+    }
+    #vista_Imagen button{
+
+        display: block;
+        margin: 12px 0px;
+    }
+    #mostrarPeliculas{
+        color: white;
+        width: 900px;
+    }
+
+    #mostrarPeli2{
+        color: white;
+        width: 900px;
+    }
+    #opcionesUsuario button{
+        color: aliceblue;
+
+    }
+
+    #mostrarActores{
+        color: aliceblue;
+    }
+
+    #Comentarios{
+        color: aliceblue;
+    }

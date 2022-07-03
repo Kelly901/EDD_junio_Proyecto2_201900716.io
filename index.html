@@ -1,12 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<script type="text/javascript" src="app.js"></script>-->
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <style>
+        h1 {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 10em;
+            animation: anim 4s infinite;
+        }
+
+        @keyframes anim {
+            from {
+                width: 0;
+            }
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hello, world!</h1>
+
+    <div class="linea" id="linea" style="display:none;">
+
+        <a href="">+502 782324343</a>
+
+        <a href="">Quienes somos</a>
+        <a href="">correo</a>
+
+        <a href=""><img
+                src="https://img.utdstc.com/icon/fe0/ab6/fe0ab67fa0de2b2681602db5708a076f50dd21106e0c2d38b9661875a37e235e:200"
+                alt=""></a>
+        <a href=""><img
+                src="https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ"
+                alt=""></a>
+        <a href=""><img src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png" alt=""></a>
+
+        <!-- <button id="iniciar" type="button" class="btn btn-outline-secondary" onclick="a.mostrarLogin()">Inciar
+            sesión</button>-->
+        <button id="cerrar" type="button" class="btn btn-outline-secondary" onclick="a.mostrarLogin()"
+            style="display: none;">Cerrar sesión</button>
+
+
+    </div>
+
+    <!--Informacion-->
+
+    <div class="info" id="info" style="display: none;">
+        <h1 style="color:aliceblue ;">Moviecats</h1>
+    </div>
+    <!--opciones generales-->
+    <div id="opcionesGenerales" class="opcionesGenerales" style="display: none;">
+        <button type="button" class="btn btn-outline-dark" onclick="a.mostrarPrincipal()">Principal</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="">Mostrar Libreras</button>
+        <button type="button" class="btn btn-outline-dark" onclick="">Mostrar Libros</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="">Mostrar Autores</button>
+
+
+
+    </div>
+    <!--Administrador  -->
+    <div class="opcionesAdmin" id="opcionesAdmin" style="display:none ;">
+        <button type="button" class="btn btn-outline-dark" onclick="">Principal</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="a.CargarPeliculas()">Cargar Películas</button>
+        <button type="button" class="btn btn-outline-dark" onclick="a.CargarClientes()">Cargar Clientes</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="a.CargarAutores()">Cargar Actores</button>
+        <button type="button" class="btn btn-outline-dark" onclick="a.CargarCategoria()">Cargar Categorías</button>
+        <button type="button" class="btn btn-outline-dark" onclick="">Descargar Estructuras</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="">Blockchain</button>
+
+
+
+
+
+    </div>
+
+    <!--Opciones del usuario -->
+    <div class="opcionesUsuario" id="opcionesUsuario" style="display:none ;">
+        <button type="button" class="btn btn-outline-dark" onclick="a.MostrarPeliculas()">Principal</button>
+
+        <button type="button" class="btn btn-outline-dark" onclick="a.MostrarBotonesActores()">Ver Actores</button>
+        <button type="button" class="btn btn-outline-dark" onclick="a.Mostrar_categorias()">Ver Categorias</button>
+        <button type="button" class="btn btn-outline-dark" onclick="a.mostrarComentarios()">Mostrar comentarios</button>
+
+
+        
+    </div>
+    <!--Mostrar las peliculas-->
+    <div id="botonesPelicula" style="display: none;">
+
+        <button type="button" class="btn btn-light" onclick="a.MostrarPeliculas2()">Ascendente</button>
+        <button type="button" class="btn btn-light" onclick="a.MostrarPeliculas3()">Descendente</button>
+        
+    </div>
+<!---Mostrar peliculas-->
+    <div id="mostrarPeli" style="display:none;">
+        <div id="mostrarPeliculas"></div>
+
+    </div>
+    <!--Ascendente-->
+    <div id="mostrarPeli2" style="display:none;">
+        <div id="mostrarPeliculas2"></div>
+
+    </div>
+
+
+    <!--Mostrar actores-->
+    <div id="botonesActores" style="display: none;">
+
+        <button type="button" class="btn btn-light" onclick="a.MostrarAcotores_pre()">Pre orden</button>
+        <button type="button" class="btn btn-light" onclick="a.MostrarAcotores_in()">In orden</button>
+        <button type="button" class="btn btn-light" onclick="a.MostrarAcotores_post()">Post orden</button>
+
+
+        
+    </div>
+
+    <div id="mostrarActores" style="display: none;">
+        
+    </div>
+
+    <!--Mostrar categorias-->
+    <div id="mostrarCategorias">
+       
+    </div>
+    <!--Comentarios -->
+
+    <div id="Comentarios" style="display: none;">
+
+    </div>
+    <!--mostrar -->
+    <!-- Iniciar sesion-->
+    <div id="login" class="login" style="text-align:center; display: block;">
+
+        <h1>Login</h1>
+
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                <input id="user" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input id="password" type="password" class="form-control" id="exampleInputPassword1">
+                <input id="administrador" type="checkbox"> <label for="">Administrador</label>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="a.comprobarUsuario()">Submit</button>
+        </form>
+
+    </div>
+
+
+
+    <!--Carga masiva de peliculas-->
+    
+    <div id="cargar_peliculas" style="display: none;">
+        <h1>Cargar peliculas--</h1>
+        <input id="archivo_P" type="file" accept=".json">
+
+    </div>
+
+    <!-- Carga masiva de clientes  -->
+
+    <div id="cargar_clientes" style="display: none;">
+        <h1>Cargar Clientes</h1>
+        <input id="archivo_Cliente" type="file" accept=".json">
+
+    </div>
+    <!-- Carga masiva de autores-->
+    <div id="cargar_Actores" style="display: none;">
+        <h1>Cargar Archivo de Actores</h1>
+        <input id="archivo_Actores" type="file" accept=".json">
+
+
+    </div>
+
+    <!-- Carga masiva de Categorías-->
+    <div id="cargar_Categorias" style="display: none;">
+        <h1>Cargar Categorias</h1>
+        <input id="archivo_Categorias" type="file" accept=".json">
+
+    </div>
+
+
+    <div id="vista_Imagen" style="display: none;">
+        <!---->
+        <div>
+
+            <button type="button" class="btn btn-outline-dark" onclick="a.mostrarPelicula()">Grafo películas</button>
+            <button type="button" class="btn btn-outline-dark" onclick="a.mostrarCliente()">Grafo clientes</button>
+            <button type="button" class="btn btn-outline-dark" onclick="a.mostrarActores()">Grafo actores</button>
+            <button type="button" class="btn btn-outline-dark" onclick="a.mostrarCategoria()">Grafo categorías</button>
+        </div>
+        <!-- -->
+        <div id="lienzo" style="display: none; "></div>
+
+        <div>
+            <button id="descargar" type="button" onclick="descargarImagen()"> Descargar grafo</button>
+        </div>
+    </div>
+    <!---->
+
+    <!--para el graphviz-->
+    <script src="//d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+    <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+
+    <script src="https://superal.github.io/canvas2image/canvas2image.js "></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="TablaHash.js"></script>-->
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="CargarArchivo.js"></script>
+    <script type="text/javascript" src="Avl.js"></script>
+    <script type="text/javascript" src="ListaClientes.js"></script>
+    <script type="text/javascript" src="ArbolBinario.js"></script>
+    <script type="text/javascript" src="TablaHash.js"></script>
+
+
+
+
+
+
+
+
 </body>
+<script>
+    function descargarImagen() {
+        html2canvas($('#lienzo')[0]).then(function (canvas) {
+            return Canvas2Image.saveAsPNG(canvas);
+            $(".response").append(canvas);
+        });
+    }
+
+  
+</script>
+
 </html>
