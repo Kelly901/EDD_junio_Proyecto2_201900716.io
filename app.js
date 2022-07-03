@@ -89,12 +89,17 @@ class App {
         let principalAdmin = document.getElementById("opcionesAdmin")
         let cargarCategorias=document.getElementById("cargar_Categorias")
         let botonesP=document.getElementById("botonesPelicula")
+        let cargarClientes=document.getElementById("cargar_clientes")
 
         let principalG = document.getElementById("opcionesGenerales");
         let cerrar = document.getElementById("cerrar");
         let vista_Imagen = document.getElementById("vista_Imagen")
         let opcionesUsuario =document.getElementById("opcionesUsuario")
         let botones=document.getElementById("botonesActores")
+        let cargar_peliculas = document.getElementById("cargar_peliculas")
+        let cargarActores = document.getElementById("cargar_Actores")
+
+
         if(CargarArchivo.div_peliculas!=null){
 
             CargarArchivo.div_peliculas.style.display="none"
@@ -108,7 +113,9 @@ class App {
         if ( App.mostrarPelis!=null) {
             App.mostrarPelis.style.display="none"
         }
-
+        cargarActores.style.display="none"
+        cargarClientes.style.display="none"
+        cargar_peliculas.style.display="none"
         botonesP.style.display="none"
         botones.style.display="none"
         let linea = document.getElementById("linea")
@@ -287,6 +294,8 @@ class App {
 
     MostrarPeliculas(){
         let botones=document.getElementById("botonesPelicula")
+        let botonesA=document.getElementById("botonesActores")
+
         App.mostrarPelis=document.getElementById("mostrarPeliculas")
         App.mostrarPelis.innerHTML=""
         let vista=document.getElementById("mostrarPeli")
@@ -300,6 +309,7 @@ class App {
             CargarArchivo.div_peliculas.style.display="none"
         }
         //"text-align:center; display: block
+        botonesA.style.display="none"
         botones.style.display="block"
         vista.style.textAlign="center"
         vista.style.display="block"
