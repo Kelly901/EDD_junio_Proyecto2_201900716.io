@@ -27,9 +27,9 @@ class NodoAvl {
         let grafo;
 
         if (this.left==null && this.right==null) {
-            grafo="nodo"+this.id+"[label =\""+this.pelicula.id+"\"];\n";
+            grafo="nodo"+this.id+"[label =\""+this.pelicula.id+"\\n"+this.pelicula.nombre+"\"];\n";
         }else{
-            grafo="nodo"+this.id+"[ label=\"<C0>|"+this.pelicula.id+"|<C1>\"];\n";
+            grafo="nodo"+this.id+"[ label=\"<C0>|"+this.pelicula.id+"\\n"+this.pelicula.nombre+"|<C1>\"];\n";
         }
 
         if (this.left!=null) {

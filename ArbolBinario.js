@@ -24,9 +24,9 @@ class NodoArbolBinario {
         let grafo;
 
         if (this.left == null && this.right == null) {
-            grafo = "nodo" + this.id + "[label =\"" + this.actor.dni + "\"];\n";
+            grafo = "nodo" + this.id + "[label =\"" + this.actor.dni+"\\n"+this.actor.nombre + "\"];\n";
         } else {
-            grafo = "nodo" + this.id + "[ label=\"<C0>|" + this.actor.dni + "|<C1>\"];\n";
+            grafo = "nodo" + this.id + "[ label=\"<C0>|" + this.actor.dni+"\\n"+this.actor.nombre + "|<C1>\"];\n";
         }
 
         if (this.left != null) {
